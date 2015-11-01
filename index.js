@@ -1,10 +1,9 @@
 'use strict';
 var cheerio = require('cheerio');
 var he = require('he');
-var hl = require('highlight.js');
+var hl = require('highlight.js').registerLanguage('jsx', require('./jsx'));
 var highlightAuto = hl.highlightAuto;
 var highlight = hl.highlight;
-
 
 module.exports = function(input) {
     this && this.cacheable && this.cacheable();
