@@ -1,7 +1,8 @@
 'use strict';
 var cheerio = require('cheerio');
 var he = require('he');
-var hl = require('highlight.js').registerLanguage('jsx', require('./jsx'));
+var hl = require('highlight.js');
+hl.registerLanguage('jsx', require('./jsx'));
 var highlightAuto = hl.highlightAuto;
 var highlight = hl.highlight;
 
